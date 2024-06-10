@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(198, 198, 198);
+    padding: 24px;
+}
+
+.buttons{
+    button{
+        margin-right: 12px;
+    }
+}
+
+.task-field{
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+    border: 1px solid rgb(188, 188, 188);
+    padding: 12px;
+}
+
+.bottom-buttons{
+    display: flex;
+    flex-direction: row;
+    button{
+        margin-right: 8px;
+    }
+}
+
+.icons{
+    cursor: pointer;
+}

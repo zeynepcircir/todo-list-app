@@ -1,0 +1,42 @@
+<div class="container">
+    <h3>Todo App</h3>
+    <div class="input-field">
+      <mat-form-field class="example-form-field">
+        <mat-label>New Todo</mat-label>
+        <input matInput type="text" [(ngModel)]="newTask">
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="addTask()">Add new task</button>
+    </div>
+  
+    <h3>List</h3>
+    <div class="buttons">
+      <button mat-flat-button color="primary">All</button>
+      <button mat-flat-button color="primary">Done</button>
+      <button mat-flat-button color="primary">Todo</button>
+    </div>
+  
+    <div *ngFor="let task of taskList; let i = index">
+      <div class="task-field" *ngIf="!task.editing">
+        <div> {{ task.title }} </div>&nbsp;
+    
+        <div class="icons" style="display: flex;">
+          <mat-checkbox (change)="toggleTaskCompletion(task)" [checked]="task.completed"></mat-checkbox>
+          <mat-icon (click)="editTask(i)">edit</mat-icon>
+          <mat-icon (click)="deleteTask(i)">delete</mat-icon>
+        </div>
+      </div>
+      <div class="task-field" *ngIf="task.editing">
+        <mat-form-field class="example-form-field">
+          <input matInput [(ngModel)]="task.title">
+        </mat-form-field>
+        <button mat-button (click)="saveEdit(i, task.title)">Save</button>
+        <button mat-button (click)="cancelEdit(i)">Cancel</button>
+      </div>
+    </div>
+  
+    <div class="bottom-buttons">
+      <button mat-flat-button color="warn">Delete done tasks</button>
+      <button mat-flat-button color="warn">Delete all tasks</button>
+    </div>
+  </div>
+  
