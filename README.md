@@ -1,4 +1,5 @@
-<img src="https://github.com/zeynepcircir/todo-list-app/assets/81877446/c57e224d-f810-4ae5-a8d1-cd13169920f2" alt="Image 3" width="1000">
+<img src="https://github.com/zeynepcircir/todo-list-app/assets/81877446/bf32232b-ef33-469e-bcb4-fdc00490c504" alt="Image 3" width="1000">
+
 
 
 # Todo
